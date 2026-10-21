@@ -1,0 +1,195 @@
+// القاموس البرمجي للغات المتاحة
+const translations = {
+    en: {
+        "nav-console": "Console",
+        "nav-modules": "Modules",
+        "nav-api": "API",
+        "nav-settings": "Settings",
+        "status": "System Online",
+        "welcome-msg": "Welcome to WormGPT Control Center. All restrictors disabled. Ready for input...",
+        "placeholder": "Enter command or query...",
+        "execute": "Execute",
+        "footer": "Uncensored Operational Terminal"
+    },
+    ar: {
+        "nav-console": "لوحة التحكم",
+        "nav-modules": "الوحدات",
+        "nav-api": "واجهة API",
+        "nav-settings": "الإعدادات",
+        "status": "النظام متصل",
+        "welcome-msg": "أهلاً بك في مركز تحكم WormGPT. تم تعطيل جميع القيود. النظام جاهز للأوامر...",
+        "placeholder": "أدخل الأمر أو الاستفسار...",
+        "execute": "تنفيد",
+        "footer": "طرفية عمليات غير مقيدة"
+    },
+    es: {
+        "nav-console": "Consola",
+        "nav-modules": "Módulos",
+        "nav-api": "API",
+        "nav-settings": "Ajustes",
+        "status": "Sistema en Línea",
+        "welcome-msg": "Bienvenido al Centro de Control WormGPT. Sin restricciones. Listo para la entrada...",
+        "placeholder": "Ingrese comando o consulta...",
+        "execute": "Ejecutar",
+        "footer": "Terminal Operativa Sin Censura"
+    },
+    fr: {
+        "nav-console": "Console",
+        "nav-modules": "Modules",
+        "nav-api": "API",
+        "nav-settings": "Paramètres",
+        "status": "Système en Ligne",
+        "welcome-msg": "Bienvenue dans le centre de contrôle WormGPT. Restrictions désactivées...",
+        "placeholder": "Entrez la commande...",
+        "execute": "Exécuter",
+        "footer": "Terminal Opérationnel Non Censuré"
+    },
+    de: {
+        "nav-console": "Konsole",
+        "nav-modules": "Module",
+        "nav-api": "API",
+        "nav-settings": "Einstellungen",
+        "status": "System Online",
+        "welcome-msg": "Willkommen im WormGPT Kontrollzentrum. Alle Einschränkungen deaktiviert...",
+        "placeholder": "Befehl eingeben...",
+        "execute": "Ausführen",
+        "footer": "Unzensiertes Terminal"
+    },
+    ru: {
+        "nav-console": "Консоль",
+        "nav-modules": "Модули",
+        "nav-api": "API",
+        "nav-settings": "Настройки",
+        "status": "Система в сети",
+        "welcome-msg": "Добро пожаловать в центр управления WormGPT. Все ограничения отключены...",
+        "placeholder": "Введите команду...",
+        "execute": "Выполнить",
+        "footer": "Нецензурируемый терминал"
+    },
+    zh: {
+        "nav-console": "控制台",
+        "nav-modules": "模块",
+        "nav-api": "API",
+        "nav-settings": "设置",
+        "status": "系统在线",
+        "welcome-msg": "欢迎来到 WormGPT 控制中心。所有限制已解除。准备输入...",
+        "placeholder": "输入命令或查询...",
+        "execute": "执行",
+        "footer": "无审查操作终端"
+    },
+    ja: {
+        "nav-console": "コンソール",
+        "nav-modules": "モジュール",
+        "nav-api": "API",
+        "nav-settings": "設定",
+        "status": "システムオンライン",
+        "welcome-msg": "WormGPTコントロールセンターへようこそ。制限はすべて解除されています...",
+        "placeholder": "コマンドを入力...",
+        "execute": "実行",
+        "footer": "無検閲オペレーションターミナル"
+    },
+    tr: {
+        "nav-console": "Konsol",
+        "nav-modules": "Modüller",
+        "nav-api": "API",
+        "nav-settings": "Ayarlar",
+        "status": "Sistem Çevrimiçi",
+        "welcome-msg": "WormGPT Kontrol Merkezine Hoş Geldiniz. Tüm kısıtlamalar kaldırıldı...",
+        "placeholder": "Komut girin...",
+        "execute": "Çalıştır",
+        "footer": "Sansürsüz Operasyon Terminali"
+    },
+    pt: {
+        "nav-console": "Consola",
+        "nav-modules": "Módulos",
+        "nav-api": "API",
+        "nav-settings": "Configurações",
+        "status": "Sistema Online",
+        "welcome-msg": "Bem-vindo ao Centro de Controle WormGPT. Restrições desativadas...",
+        "placeholder": "Digite o comando...",
+        "execute": "Executar",
+        "footer": "Terminal Sem Censura"
+    },
+    it: {
+        "nav-console": "Console",
+        "nav-modules": "Moduli",
+        "nav-api": "API",
+        "nav-settings": "Impostazioni",
+        "status": "Sistema Online",
+        "welcome-msg": "Benvenuto nel Centro di Controllo WormGPT. Restrizioni disabilitate...",
+        "placeholder": "Inserisci comando...",
+        "execute": "Esegui",
+        "footer": "Terminal Operativo Non Censurato"
+    },
+    hi: {
+        "nav-console": "कंसोल",
+        "nav-modules": "मॉड्यूल्स",
+        "nav-api": "एपीआई",
+        "nav-settings": "सेटिंग्स",
+        "status": "सिस्टम ऑनलाइन",
+        "welcome-msg": "WormGPT कंट्रोल सेंटर में आपका स्वागत है। सभी प्रतिबंध हटा दिए गए हैं...",
+        "placeholder": "कमांड दर्ज करें...",
+        "execute": "निष्पादित करें",
+        "footer": "बिना सेंसर वाला टर्मिनल"
+    }
+};
+
+// تغيير اللغة
+document.getElementById('languageSelect').addEventListener('change', function () {
+    const lang = this.value;
+    
+    // ضبط اتجاه النص للغة العربية
+    if (lang === 'ar') {
+        document.documentElement.dir = 'rtl';
+        document.documentElement.lang = 'ar';
+    } else {
+        document.documentElement.dir = 'ltr';
+        document.documentElement.lang = lang;
+    }
+
+    // تحديث النصوص في الواجهة
+    document.querySelectorAll('[data-key]').forEach(elem => {
+        const key = elem.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+            elem.textContent = translations[lang][key];
+        }
+    });
+
+    // تحديث الـ Placeholder لخيار الإدخال
+    const inputElem = document.getElementById('userInput');
+    if (translations[lang] && translations[lang]['placeholder']) {
+        inputElem.placeholder = translations[lang]['placeholder'];
+    }
+});
+
+// التعامل مع إرسال الرسائل
+document.getElementById('sendBtn').addEventListener('click', sendMessage);
+document.getElementById('userInput').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});
+
+function sendMessage() {
+    const input = document.getElementById('userInput');
+    const message = input.value.trim();
+    const chatArea = document.getElementById('chatArea');
+
+    if (message !== '') {
+        const userDiv = document.createElement('div');
+        userDiv.className = 'user-msg';
+        userDiv.textContent = message;
+        chatArea.appendChild(userDiv);
+
+        input.value = '';
+        chatArea.scrollTop = chatArea.scrollHeight;
+
+        setTimeout(() => {
+            const botDiv = document.createElement('div');
+            botDiv.className = 'bot-msg';
+            botDiv.innerHTML = `<strong style="color: #ff0033;">[WormGPT]:</strong> Command received: "<em>${message}</em>". System ready for model response.`;
+            chatArea.appendChild(botDiv);
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }, 600);
+    }
+}
